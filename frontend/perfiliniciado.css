@@ -1,0 +1,72 @@
+body {
+  background-color: #6F1D1D;
+}
+
+.articulo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+article h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin-top: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+}
+
+.articulo1 {
+  background-color: #C09057;
+  border-radius: 25px;
+  margin-top: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  border: 7px solid black;
+}
+
+.divParaFondo {
+  width: 100%;
+  margin-top: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 10%;
+  padding-bottom: 15%;
+  background-color: black;
+  border-radius: 25px;
+}
+
+.imagenPerfil {
+  background-color: #6F1D1D;
+  border-radius: 25px;
+  width: 120px;
+  height: 120px;
+}
+
+.textoPerfil {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+}
+
+.imagenes {
+  width: 100px;
+  height: 100px;
+}
+
+.textoImagenes {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=perfiliniciado.css.map */
