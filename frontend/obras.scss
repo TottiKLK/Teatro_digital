@@ -10,10 +10,10 @@ $roboto-tipoletra: 'Roboto', sans-serif;
 }
 
 body {
-    margin: 0;
+    margin: 0; 
 }
 
-.slidercolor {
+.slidercolor{
     background-color: black;
 }
 
@@ -80,21 +80,17 @@ section {
     background-color: $colorGranate;
 }
 
-#carouselExampleFade .carousel-item img {
-    height: 1200px;
-}
-
-.imgObrasDestacadas {
+.imgObrasDestacadas{
     border: 10px solid black;
     border-radius: 5%;
-    width: 100%;
-    height: auto;
 }
 
-.tituloObrasDestacadas {
+
+
+.tituloObrasDestacadas{
     font-family: $roboto-tipoletra;
-    color: $colorGranate;
-    background-color: $colorFondo;
+    color: $colorFondo;
+    background-color: black;
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
@@ -102,20 +98,22 @@ section {
     margin-bottom: -5%;
 }
 
-.section1 {
+.tituloDeObras{
+    font-family: $roboto-tipoletra;
+}
+
+.section1{
     margin-top: 5%;
     margin-bottom: 5%;
     background-color: $colorGranate;
     padding-top: 10%;
     padding-bottom: 10%;
-    border: 10px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
 }
 
-.tituloDeObras {
-    font-family: $roboto-tipoletra;
-}
-
-.boton {
+.boton{
     background-color: $colorFondo;
     padding-left: 30px;
     padding-right: 30px;
@@ -123,13 +121,12 @@ section {
     padding-bottom: 10px;
     border-radius: 30%;
     font-family: $roboto-tipoletra;
-    text-decoration: none;
+    text-decoration: none; 
     color: #000;
     font-size: 120%;
 }
 
-
-.col {
+.col{
     margin-bottom: 4%;
 }
 
@@ -205,7 +202,7 @@ section {
 }
 
 
-.footer {
+.footer{
     margin-top: -5%;
     padding-top: 10%;
     background-color: $colorFondo;
