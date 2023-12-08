@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reservar.css" />
+    <title>RESERVA DE OBRAS DE TEATRO</title>
+</head>
+
+<body>
+    <div class="alert" id="purchaseAlert">
+        ¡Compra realizada con éxito!
+    </div>
+    <div class="obras-container">
+        <label>Elige una obra:</label>
+        <select id="obras">
+            <option value="40">Cien años de soledad($40)</option>
+            <option value="34">El club de la lucha ($34)</option>
+            <option value="70">La noche estrellada ($70)</option>
+            <option value="50">1984 ($50)</option>
+            <option value="60">El laberinto del fauno($60)</option>
+            <option value="50">El pensador($50)</option>
+            <option value="80">Matar a un ruiseñor($80)</option>
+            <option value="100">La La Land($100)</option>
+            <option value="60">La última cena($60)</option>
+        </select>
+    </div>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+
+    <p class="text">
+        Has seleccionado <span id="count">0</span> asientos para la obra <span id="selectedObraName"></span> por el precio de $<span id="total">0</span>
+    </p>
+    <div class="button-container">
+        <button id="buyButton" class="buy-button">Comprar</button>
+        <button id="resetButton" class="reset-button">Elegir Otros Asientos</button>
+        <button id="viewReservationsButton" class="view-reservations-button"><a href="../frontend/mireserva.html">Mis Reservas</a></button>
+    </div>
+
+    <script src="../backend/reservas.js"></script>
+    <script src="../backend/api.js"></script>
+</body>
+
+</html>
