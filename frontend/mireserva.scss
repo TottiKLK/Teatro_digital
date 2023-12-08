@@ -1,0 +1,96 @@
+$colorFondo: #C09057;
+$colorGranate: #6F1D1D;
+$roboto-tipoletra: 'Roboto', sans-serif;
+
+body{
+    background-color: $colorGranate;
+}
+
+.articulo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+article h1 {
+    color: white;
+    margin-top: 0; 
+    font-family: $roboto-tipoletra;
+    font-size: 3rem;
+}
+
+.salirReserva{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.imagensalir{
+    width: 80px;
+    height: 80px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.eliminarReserva{
+    border: 3px solid $colorGranate;
+    background-color: $colorGranate;
+    color: $colorFondo;
+    font-family: $roboto-tipoletra;
+    font-size: 20px;
+    padding: 5%;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+
+.articulo1{
+    background-color: #C09057;
+    border-radius: 25px;
+    margin-top: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border: 7px solid black;
+}
+
+.divParaFondo{
+    width: 100%;
+    margin-top: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    background-color: black;
+    border-radius: 25px;
+}
+
+.imagenPerfil{
+    background-color: $colorGranate;
+    border-radius: 25px;
+    width: 120px;
+    height: 120px;
+}
+
+.textoPerfil{
+    color: white;
+    font-family: $roboto-tipoletra;
+    font-size: 50px;
+}
+
+.imagenes{
+    width: 100px;
+    height: 100px;
+}
+
+
+.textoImagenes{
+    font-family: $roboto-tipoletra;
+    font-size: 2rem;
+}
