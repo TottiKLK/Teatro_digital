@@ -96,6 +96,7 @@ section {
 
 .tituloDeObras {
   font-family: "Roboto", sans-serif;
+  color: black;
 }
 
 .section1 {
@@ -115,7 +116,7 @@ section {
   padding-right: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 30%;
+  border-radius: 25px;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
   color: #000;
