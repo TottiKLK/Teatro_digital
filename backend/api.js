@@ -20,8 +20,8 @@ app.get('/reservations', (req, res) => {
 app.post('/reservations', (req, res) => {
   const { seats, obraName, seatPrice } = req.body;
 
-  if (!seats || !Array.isArray(seats) || seats.length === 0) {
-    return res.status(400).json({ error: 'Invalid request. Please provide an array of seats.' });
+  if (!seats || !Array.isArray(seats) || seats.length === 0 || !obraName || !seatPrice) {
+    return res.status(400).json({ error: 'Invalid request. Please provide valid data.' });
   }
 
   const reservedSeats = seats.map(seatIndex => ({

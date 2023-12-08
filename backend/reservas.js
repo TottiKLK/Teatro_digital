@@ -45,7 +45,7 @@ function populateUI() {
         obrasSelect.selectedIndex = selectedObrasIndex;
     }
 
-    purchasedSeats = JSON.parse(localStorage.getItem('purchasedSeats')) || []; // Restaurar los asientos comprados
+    purchasedSeats = JSON.parse(localStorage.getItem('purchasedSeats')) || []; 
     purchasedSeats.forEach((index) => {
         seats[index].classList.add('occupied', 'purchased');
     });
@@ -154,10 +154,8 @@ viewReservationsButton.addEventListener('click', () => {
     const reservedSeats = document.querySelectorAll('.row .seat.purchased');
 
     if (reservedSeats.length === 0) {
-        alert('No tienes reservas.');
     } else {
         const reservedSeatNumbers = [...reservedSeats].map((seat) => [...seats].indexOf(seat) + 1);
-        alert(`Tus reservas: ${reservedSeatNumbers.join(', ')}`);
     }
 });
 
