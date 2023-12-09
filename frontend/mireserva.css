@@ -1,6 +1,6 @@
 body {
   background-color: #6F1D1D;
-  border: 2px solid #C09057;
+  border: 10px solid #000000;
 }
 
 .articulo {
@@ -117,4 +117,12 @@ article h1 {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+p {
+  color:black;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-right: 20%;
+  margin-left: 20%;
 }
