@@ -123,6 +123,11 @@ section {
   font-size: 120%;
 }
 
+.boton a {
+  text-decoration: none;
+  color: black;
+}
+
 .col {
   margin-bottom: 4%;
 }
