@@ -5,17 +5,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="tu_estilo.css" /> 
+    <link rel="stylesheet" href="mireserva.css" /> 
     <title>Mis Reservas</title>
 </head>
 
 <body>
     <h1>Mis Reservas</h1>
 
-    <div id="reservas-lista"></div>
+    <div id="reservas-lista" style="display: flex; justify-content: center; text-align: center; font-family: 'Roboto', sans-serif; font-size: 30px;"></div>
     <div>
-        <p>Total de Asientos: <span id="total-asientos"></span></p>
-        <p>Precio Total: $<span id="precio-total"></span></p>
+        <p class="reservaslistas">Total de Asientos: <span id="total-asientos"></span></p>
+        <p class="reservaslistas">Precio Total: $<span id="precio-total"></span></p>
+        <p class="reservaslistas">Correo:<span id="userEmailDisplay"></span></p>
     </div>
     <script src="../backend/misreservas.js"></script> 
     <script src="../backend/api.js"></script>

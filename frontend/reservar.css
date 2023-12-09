@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -12,7 +10,24 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: 'Lato', 'sans-serif';
+  font-family: "Roboto", sans-serif;
+}
+
+.button-container a {
+  text-decoration: none;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  background-color: #C09057;
+}
+
+.view-reservations-button {
+  background-color: #C09057;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .obras-container {
@@ -38,8 +53,8 @@ body {
 
 .seat {
   background-color: #444451;
-  height: 12px;
-  width: 15px;
+  height: 50px;
+  width: 60px;
   margin: 3px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -101,48 +116,103 @@ p.text {
 }
 
 p.text span {
-  color: #6feaf6;
+  color: #C09057;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .buy-button,
-  .reset-button {
-    background-color: #444451;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .buy-button:hover,
-  .reset-button:hover {
-    background-color: #C09057;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .buy-button {
-    margin-right: 10px;
-  }
-  
+.buy-button,
+.reset-button {
+  background-color: #C09057;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.buy-button:hover,
+.reset-button:hover {
+  background-color: #C09057;
+}
+
 .alert {
-    background-color: #00ff88; 
-    color: #fff; 
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 20px;
-    text-align: center;
-    display: none; 
+  background-color: #00ff88;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+}
+
+.alert.show {
+  display: block;
+}
+.email-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.email-popup-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#emailInput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.email-popup button {
+  background-color: #C09057;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .seat {
+    background-color: #444451;
+    height: 20px;
+    width: 30px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
-  
-  .alert.show {
-    display: block; 
-  }
-  
+}

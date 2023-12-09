@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +15,7 @@
         ¡Compra realizada con éxito!
     </div>
     <div class="obras-container">
-        <label>Elige una obra:</label>
+        <label>Obras del TEATRO:</label>
         <select id="obras">
             <option value="40">Cien años de soledad($40)</option>
             <option value="34">El club de la lucha ($34)</option>
@@ -31,17 +32,17 @@
     <ul class="showcase">
         <li>
             <div class="seat"></div>
-            <small>N/A</small>
+            <small>Libre</small>
         </li>
 
         <li>
             <div class="seat selected"></div>
-            <small>Selected</small>
+            <small>Seleccionado</small>
         </li>
 
         <li>
             <div class="seat occupied"></div>
-            <small>Occupied</small>
+            <small>Ocupado</small>
         </li>
     </ul>
 
@@ -116,9 +117,17 @@
         Has seleccionado <span id="count">0</span> asientos para la obra <span id="selectedObraName"></span> por el precio de $<span id="total">0</span>
     </p>
     <div class="button-container">
-        <button id="buyButton" class="buy-button">Comprar</button>
-        <button id="resetButton" class="reset-button">Elegir Otros Asientos</button>
+        <button id="buyButton" class="buy-button">Comprar ahora</button>
         <button id="viewReservationsButton" class="view-reservations-button"><a href="../frontend/mireserva.html">Mis Reservas</a></button>
+        <button id="resetButton" class="reset-button">Eliminar Reserva</button>
+        <button id="viewReservationsButton" class="view-reservations-button"><a href="index.html">Volver inicio</a></button>
+    </div>
+ <div id="emailPopup" class="email-popup">
+        <div class="email-popup-content">
+            <p>Introduce tu correo electrónico:</p>
+            <input type="email" id="emailInput" placeholder="Correo electrónico" />
+            <button onclick="submitEmail()">Enviar</button>
+        </div>
     </div>
 
     <script src="../backend/reservas.js"></script>
