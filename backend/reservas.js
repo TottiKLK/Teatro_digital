@@ -5,13 +5,12 @@ const total = document.getElementById('total');
 const obrasSelect = document.getElementById('obras');
 const buyButton = document.getElementById('buyButton');
 const resetButton = document.getElementById('resetButton');
-const purchaseAlert = document.getElementById('purchaseAlert');
 
-let purchasedSeats = []; 
+
+let purchasedSeats = [];
 
 populateUI();
 let ticketPrice = +obrasSelect.value;
-
 
 function setObrasData(obrasIndex, obrasPrice) {
     localStorage.setItem('selectedObrasIndex', obrasIndex);
@@ -27,7 +26,6 @@ function updateSelectedCount() {
     count.innerText = selectedSeatsCount;
     total.innerText = selectedSeatsCount * ticketPrice;
 }
-
 
 function populateUI() {
     const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
@@ -45,12 +43,11 @@ function populateUI() {
         obrasSelect.selectedIndex = selectedObrasIndex;
     }
 
-    purchasedSeats = JSON.parse(localStorage.getItem('purchasedSeats')) || []; 
+    purchasedSeats = JSON.parse(localStorage.getItem('purchasedSeats')) || [];
     purchasedSeats.forEach((index) => {
         seats[index].classList.add('occupied', 'purchased');
     });
 }
-
 
 obrasSelect.addEventListener('change', (e) => {
     ticketPrice = +e.target.value;
@@ -58,15 +55,12 @@ obrasSelect.addEventListener('change', (e) => {
     updateSelectedCount();
 });
 
-
 container.addEventListener('click', (e) => {
     if (e.target.classList.contains('seat') && !e.target.classList.contains('occupied')) {
         e.target.classList.toggle('selected');
-
         updateSelectedCount();
     }
 });
-
 
 async function handleBuyButtonClick() {
     try {
@@ -92,8 +86,6 @@ async function handleBuyButtonClick() {
         });
 
         if (response.ok) {
-            alert('¡Compra realizada con éxito!');
-
             selectedSeats.forEach((seat) => {
                 seat.classList.remove('selected');
                 seat.classList.add('occupied', 'purchased');
@@ -104,17 +96,35 @@ async function handleBuyButtonClick() {
 
             updateSelectedCount();
 
-            purchaseAlert.classList.add('show');
-
-            setTimeout(() => {
-                purchaseAlert.classList.remove('show');
-            }, 3000);
+            openEmailPopup();
         } else {
             alert('Error al realizar la compra.');
         }
     } catch (error) {
         console.error('Error al realizar la solicitud fetch:', error);
     }
+}
+
+function openEmailPopup() {
+    const emailPopup = document.getElementById('emailPopup');
+    emailPopup.style.display = 'flex';
+}
+
+function submitEmail() {
+    const emailInputValue = document.getElementById('emailInput').value;
+
+    if (!emailInputValue) {
+        alert('Por favor, ingresa tu correo electrónico.');
+        return;
+    }
+    localStorage.setItem('userEmail', emailInputValue);
+    alert(`Correo electrónico ingresado: ${emailInputValue}`);
+    closeEmailPopup();
+}
+
+function closeEmailPopup() {
+    const emailPopup = document.getElementById('emailPopup');
+    emailPopup.style.display = 'none';
 }
 
 async function handleResetButtonClick() {
@@ -130,13 +140,11 @@ async function handleResetButtonClick() {
         if (response.ok) {
             alert('Asientos reseteados con éxito!');
 
-            
             seats.forEach(seat => seat.classList.remove('selected', 'occupied', 'purchased'));
 
-            
             updateSelectedCount();
 
-            purchasedSeats = []; 
+            purchasedSeats = [];
             localStorage.removeItem('selectedSeats');
             localStorage.removeItem('purchasedSeats');
         } else {
@@ -147,19 +155,18 @@ async function handleResetButtonClick() {
     }
 }
 
-
 const viewReservationsButton = document.getElementById('viewReservationsButton');
 
 viewReservationsButton.addEventListener('click', () => {
     const reservedSeats = document.querySelectorAll('.row .seat.purchased');
 
     if (reservedSeats.length === 0) {
+
     } else {
         const reservedSeatNumbers = [...reservedSeats].map((seat) => [...seats].indexOf(seat) + 1);
+
     }
 });
 
 buyButton.addEventListener('click', handleBuyButtonClick);
 resetButton.addEventListener('click', handleResetButtonClick);
-
-updateSelectedCount();

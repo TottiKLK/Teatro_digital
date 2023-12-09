@@ -2,6 +2,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const reservasLista = document.getElementById('reservas-lista');
     const totalAsientosElemento = document.getElementById('total-asientos');
     const precioTotalElemento = document.getElementById('precio-total');
+    const userEmailElemento = document.getElementById('userEmailDisplay');
+    const userEmail = localStorage.getItem('userEmail');
+
+    if (userEmail) {
+        userEmailElemento.innerText = userEmail;
+    } else {
+        userEmailElemento.innerText = 'Correo no disponible';
+    }
 
     const compras = await obtenerCompras();
 
@@ -28,32 +36,27 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 reservasLista.appendChild(reservaElemento);
 
-                
                 numeroTotalAsientos++;
                 precioTotal += reserva.seatPrice;
             });
         } else {
-            
             const mensajeSinReservas = document.createElement('p');
             mensajeSinReservas.innerText = 'No hay reservas relacionadas con tus compras.';
             reservasLista.appendChild(mensajeSinReservas);
         }
 
-        
         totalAsientosElemento.innerText = numeroTotalAsientos;
         precioTotalElemento.innerText = precioTotal;
     } else {
-        
         const mensajeSinCompras = document.createElement('p');
         mensajeSinCompras.innerText = 'No has realizado ninguna compra.';
         reservasLista.appendChild(mensajeSinCompras);
     }
 });
 
-
 async function obtenerCompras() {
     try {
-        const response = await fetch('http://localhost:3000/reservations'); 
+        const response = await fetch('http://localhost:3000/reservations');
         if (response.ok) {
             const compras = await response.json();
             return compras;
@@ -67,10 +70,9 @@ async function obtenerCompras() {
     }
 }
 
-
 async function obtenerReservas() {
     try {
-        const response = await fetch('http://localhost:3000/reservations'); 
+        const response = await fetch('http://localhost:3000/reservations');
         if (response.ok) {
             const reservas = await response.json();
             return reservas;

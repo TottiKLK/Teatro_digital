@@ -1,5 +1,6 @@
 body {
   background-color: #6F1D1D;
+  border: 2px solid #C09057;
 }
 
 .articulo {
@@ -89,4 +90,31 @@ article h1 {
   font-size: 2rem;
 }
 
-/*# sourceMappingURL=mireserva.css.map */
+.titulo {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 50px;
+  border: 1px solid #C09057;
+  background-color: #C09057;
+  border-radius: 25px;
+  margin-inline: 20%;
+  font-family: "Roboto", sans-serif;
+}
+
+.reservaslistas {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-right: 20%;
+  margin-left: 20%;
+  font-family: "Roboto", sans-serif;
+}
+
+.columnas {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
