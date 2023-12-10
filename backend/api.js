@@ -9,7 +9,7 @@ const port = 3000;
 app.use(bodyParser.json());
 app.use(cors());
 
-const reservationsFilePath = 'backend/reservations.json';
+const reservationsFilePath = 'reservations.json';
 
 let reservations = loadReservations();
 
