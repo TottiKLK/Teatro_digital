@@ -73,7 +73,7 @@ async function handleBuyButtonClick() {
         const obraName = document.getElementById('obras').options[document.getElementById('obras').selectedIndex].text;
         const seatPrice = +obrasSelect.value;
 
-        const response = await fetch('http://localhost:3000/reservations', {
+        const response = await fetch('http://54.82.24.123/reservations', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ function closeEmailPopup() {
 
 async function handleResetButtonClick() {
     try {
-        const response = await fetch('http://localhost:3000/reset', {
+        const response = await fetch('http://54.82.24.123/reset', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

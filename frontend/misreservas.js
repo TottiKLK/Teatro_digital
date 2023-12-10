@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function obtenerCompras() {
     try {
-        const response = await fetch('http://localhost:3000/reservations');
+        const response = await fetch('http://54.82.24.123/reservations');
         if (response.ok) {
             const compras = await response.json();
             return compras;
@@ -72,7 +72,7 @@ async function obtenerCompras() {
 
 async function obtenerReservas() {
     try {
-        const response = await fetch('http://localhost:3000/reservations');
+        const response = await fetch('http://54.82.24.123/reservations');
         if (response.ok) {
             const reservas = await response.json();
             return reservas;
